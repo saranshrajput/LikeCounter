@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5438/like_counter}
+    username: ${SPRING_DATASOURCE_USERNAME:like_counter}
+    password: ${SPRING_DATASOURCE_PASSWORD:like_counter}
+  sql:
+    init:
+      mode: always
+server:
+  port: ${SERVER_PORT:3000}
