@@ -37,6 +37,7 @@ app.delete('/posts/:postId/like', wrap(async (req, res) => {
 }));
 
 app.use((err, req, res, next) => {
+  if (err.status === 404) return res.status(404).json({ error: err.message });
   console.error(err);
   res.status(500).json({ error: 'internal error' });
 });
