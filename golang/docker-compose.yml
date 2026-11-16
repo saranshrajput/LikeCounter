@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: like_counter
+      POSTGRES_PASSWORD: like_counter
+      POSTGRES_DB: like_counter
+    ports:
+      - "5438:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U like_counter -d like_counter"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
