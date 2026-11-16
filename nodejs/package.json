@@ -1,0 +1,15 @@
+{
+  "name": "like-counter",
+  "version": "0.0.1",
+  "description": "Postgres-backed post like counter (Node.js)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test --test-concurrency=1 test/*.test.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
+}
